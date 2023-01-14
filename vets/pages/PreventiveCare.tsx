@@ -2,11 +2,9 @@ import { Chip, createStyles, Title } from '@mantine/core';
 import { useEffect, useState } from "react";
 import Cards from '../components/Cards';
 import ChipsExample from '../components/ChipsExample';
-let petInjections= [
-  '',
-]
-const pageHeader ='Prevention Care'
-function PreventiveCare() {
+import PreventiveCareComp from '../components/PreventiveCareComp';
+const thisPageHeader= ' Preventive Care';
+function CardsPage() {
     const [value, setValue] = useState(['react']);
     // const { classes } = useStyles();
     useEffect(()=> {
@@ -17,15 +15,16 @@ function PreventiveCare() {
   return (
     <div className="App">
       <a>testing address .........</a>
-      <Title order={1}>   --------  ------            {pageHeader}</Title>
-        <Cards></Cards>
-        <Cards></Cards>
-        <Cards></Cards>
-        <Cards></Cards>
-        <Cards></Cards>
+      <div> <h1>KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK</h1></div>
+      <div> <h1>      ooooooooooooo      {thisPageHeader}</h1></div>
+      <Title order={1}>   --------  ------            {thisPageHeader}</Title>
+      <div>
+      <PreventiveCareComp/>
+      </div>
+       
     </div>
   );
 }
 
-export default PreventiveCare;
+export default CardsPage;
 

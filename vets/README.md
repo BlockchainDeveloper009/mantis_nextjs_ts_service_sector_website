@@ -34,3 +34,37 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+Bugs:
+closed
+1. Home page opens in new page - done
+2. Clinic Policy font is all caps - do
+6. Diagnostic Service page header not displayed
+
+open bugs
+3. Remove Canine & Feline, Diiabetes, Preventive Care, Preventive Care Clinic
+Chips Example
+4. App shell navigation bar should be auto hidden or
+    make the page loads to be rendered with in specific space or body of main page
+5. Our Team page not created
+
+7. Align Surgery Services
+
+To do:
+completed tasks
+
+
+
+
+open tasks
+Create new Pages
+sub pages for Diagnostic Service Surgery S
+
+
+write playwright tests
+Add timinggs in side bar
+
+Styling:
+add back button to Primary Care
+Dentistry

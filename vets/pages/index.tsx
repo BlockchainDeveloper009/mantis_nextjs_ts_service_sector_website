@@ -1,8 +1,8 @@
 import Head from 'next/head'
-import Image from 'next/image'
+
 import { Inter } from '@next/font/google'
 import styles from '../styles/Home.module.css'
-
+import { AspectRatio, Image, Spoiler } from '@mantine/core';
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
@@ -15,7 +15,24 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
+      <AspectRatio ratio={900 / 1600} sx={{ maxWidth: 300 }} mx="auto">
         Main App from App.ysx
+        <div style={{ width: 240, marginLeft: 'auto', marginRight: 'auto' }}>
+        <Image
+        width={900}
+        height={1600}
+        fit="contain"
+        src="https://images.unsplash.com/photo-1527118732049-c88155f2107c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=720&q=80"
+        alt="Panda"
+      />
+      
+      </div>
+      </AspectRatio>
+      <Spoiler maxHeight={120} showLabel="Show more" hideLabel="Hide">
+      {/* Content here */} sfsdffdsdf
+    </Spoiler>
+      <p>This is main page available</p>
+
       </main>
     </>
   )

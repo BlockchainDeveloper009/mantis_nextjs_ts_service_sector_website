@@ -11,6 +11,8 @@ import {
   useMantineTheme,
   ScrollArea,
   Button,
+  SimpleGrid,
+  Title,
 } from '@mantine/core';
 //import TableExample from './ManageWillsTable';
 //import ChipsExample from './ChipsExample';
@@ -51,14 +53,27 @@ function AppShellLinkExample() {
       asideOffsetBreakpoint="sm"
       navbar={
         <Navbar p="md" hiddenBreakpoint="sm" hidden={!opened} width={{ sm: 200, lg:200 }}>
-          <Text>Application navbar</Text>
+          <Title order={3}>Services</Title>
           <Navbar.Section grow component={ScrollArea} mx="-xs" px="xs">
         {/* scrollable content here */}
             <div style={{display: "flex", flexDirection: "column"}}>
                  
-                    <Link href="/">
-                      ApplicationContainer0
+                   <Link href="/PrimaryCare">
+                      Primary Care
                     </Link>
+                    <Link href="/Diagnostics">
+                    Diagnostics
+                    </Link>
+                    <Link href="/SurgeryServices">
+                    Surgery Services
+                    </Link>
+                    <Link href="/TravelCertificates">
+                    Travel Certificates
+                    </Link>
+                    <Link href="/HospitalityServices">
+                    Hospitality Services
+                    </Link>
+                    
                     
                
                     <Link href="/ChipsExamplePage">
@@ -88,13 +103,7 @@ function AppShellLinkExample() {
                      <Link href="/PreventiveCareClinic">
                       Preventive Care Clinic
                     </Link>
-                    <Link href="/PrimaryCare">
-                      Primary Care
-                    </Link>
-                    <Link href="/EverydayCare">
-                    Everyday Care
-                    </Link>
-                   
+                    
                    
               </div>
 
@@ -114,8 +123,18 @@ function AppShellLinkExample() {
              FAQ
            </Link>
            <Link href="/ClinicPolicy">
-           CLINIC POLICY
+           Clinic Policy
            </Link>
+           <Text>  </Text>
+           <Text></Text>
+           <Text></Text>
+           <label>Timings:</label>
+          <Text>
+            
+            Mon-Fri : 8am - 6pm
+            Sat     : 8am - 5pm
+            Sun: Holiday
+          </Text>
            
           </Aside>
         </MediaQuery>
@@ -141,29 +160,43 @@ function AppShellLinkExample() {
               />
             </MediaQuery>
 
-            <Text>Amigos Vets</Text>
+           
             
-            <Text><Link href="/AboutUs" target={'_blank'}>AboutUs</Link></Text>
-            <Text><Link href="/Team" target={'_blank'}>Our Team</Link></Text>
+            <SimpleGrid cols={7}>
             
-            <Text><Link href="/ContactUs" target={'_blank'}>ContactUs</Link></Text>
-             <Text><Link href="https://goo.gl/maps/z4JxxUxyLbo43riG8" target={'_blank'}>Get Directions</Link></Text>
-            <Button styles = {(theme) => ({
-        root: {
-            border: 0,
-            height: 50,
-            paddingRight: 60,
-            '&:hover': {
-                paddingLeft:100 
+          <div><Text><Link href="/" >Amigos Vets</Link></Text></div>
+          <div><Text><Link href="/AboutUs" target={'_blank'}>AboutUs</Link></Text></div>
+          <div><Text><Link href="/Team" target={'_blank'}>Our Team</Link></Text></div>
+          <div><Text><Link href="/ContactUs" target={'_blank'}>ContactUs</Link></Text></div>
+          <div><Text><Link href="https://goo.gl/maps/z4JxxUxyLbo43riG8" target={'_blank'}>Get Directions</Link></Text></div>
+          <div><Button styles = {(theme) => ({
+            root: {
+                border: 0,
+                height: 50,
+                paddingRight: 60,
+                '&:hover': {
+                    paddingLeft:100 
+                }
             }
-        }
-      })} variant="gradient" gradient={{ from: 'orange', to: 'red' }} onClick={()=> router.push('/BookAppointment')}>Book Appointment</Button>
-          </div>
+          })} variant="gradient" gradient={{ from: 'orange', to: 'red' }} onClick={()=> router.push('/BookAppointment')}>Book Appointment</Button></div>
+
+          <div><Button styles = {(theme) => ({
+            root: {
+                border: 0,
+                height: 50,
+                paddingRight: 60,
+                '&:hover': {
+                    paddingLeft:100 
+                }
+            }
+          })} variant="gradient" gradient={{ from: 'orange', to: 'blue' }} onClick={()=> router.push('/OrderMedicine')}>Order Medicine</Button></div>
+        </SimpleGrid>
+        </div>
         </Header>
       }
     >
    
-      <Text>Resize app to see responsive navbar in action</Text>
+      
     </AppShell>
    
     

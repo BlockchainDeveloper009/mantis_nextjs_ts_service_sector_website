@@ -1,10 +1,10 @@
-import { Box, Button, Select, Textarea, TextInput } from "@mantine/core";
+import { Box, Button, Select, TextInput } from "@mantine/core";
 import { useState } from 'react';
 import { useForm } from '@mantine/form';
 import { Calendar, TimeInput, TimeRangeInput } from '@mantine/dates';
 //import { GitHubLogoIcon } from '@modulz/radix-icons';
 
-function BookAppointment() {
+function OrderMedicine() {
 
   
     
@@ -12,8 +12,7 @@ function BookAppointment() {
     const [willStartDate, setWillStartDate] = useState('');
     const [willEndDate, setWillEndDate] = useState('');
     const [benefitorAddr, setbenefitorAddr] = useState('');
-    const [specialInstructions, setSpecialInstructions] = useState('');
-    
+  
   
     const [submittedValues, setSubmittedValues] = useState('');
     let assets = [
@@ -63,7 +62,8 @@ function BookAppointment() {
         >
           <h1>'--'</h1>
           <h1>''</h1>
-          <h1>Appointment Form</h1>
+          <h1>Order Medicine  Form- </h1>
+          <h1>Sample page - Feature not readyMore time & Money to implement this feature</h1>
           <TextInput
             
             label="Pet Owner's First Name/Nombre"
@@ -181,20 +181,7 @@ function BookAppointment() {
       })
     }
         format="12" label="Time " description="Central Timezone" value={time} withAsterisk>
-           </TimeInput>   
-
-           <Textarea
-            
-            label="Special Instructions To Doctor"
-            placeholder="My dog is sensitive to bright lights | My pet likes to be pet before touching it"
-            mt="md"
-            withAsterisk
-            {...form.getInputProps('SpecialInstructions')}
-            // rightSection={<Loader size="xs" />}
-            
-            // onBlur={(event) => ValidateUserAssetId(event.currentTarget.value)}
-          
-          />  
+           </TimeInput>
           <Button type="submit" mt="md">
             Submit
           </Button>
@@ -206,4 +193,4 @@ function BookAppointment() {
   
   }
   
-  export default BookAppointment;
+  export default OrderMedicine;
