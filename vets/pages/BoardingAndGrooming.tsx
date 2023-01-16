@@ -3,8 +3,8 @@ import { useEffect, useState } from "react";
 
 
 import HospitalityServicesComp1 from '../components/HospitalityServicesComp1';
-const thisPageHeader= 'Hospitality Services';
-function DiagnosticUltrasounds() {
+const thisPageHeader= 'Boarding And Grooming';
+function BoardingAndGrooming() {
     const [value, setValue] = useState(['react']);
     // const { classes } = useStyles();
     useEffect(()=> {
@@ -14,10 +14,9 @@ function DiagnosticUltrasounds() {
 
   return (
     <div className="App">
-  <Box sx={{  color:'purple', fontSize: 18, lineHeight: 1.4, paddingTop: 100, paddingDown:200, paddingLeft:200, paddingRight:200,}}></Box>
-      <Title order={1}> ----------------- {thisPageHeader}</Title>
-        <h1>filllers</h1>
-        {/* <DiagnosticServicesSimpleGrid/>  section container*/}
+      <Box sx={{  color:'purple', fontSize: 18, lineHeight: 1.4, paddingTop: 100, paddingDown:200, paddingLeft:200, paddingRight:200,}}>
+      <Title order={1}> {thisPageHeader}</Title>
+        
         
         <Title order={1}> Overview</Title>
         <p>
@@ -46,9 +45,10 @@ In some cases, we may need to sedate your pet or use short-acting general anesth
        </section>
        </Box>
         {/* <Cards></Cards> */}
+        </Box>
     </div>
   );
 }
 
-export default DiagnosticUltrasounds;
+export default BoardingAndGrooming;
 

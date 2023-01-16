@@ -5,11 +5,8 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 
 //import { createStylesServer, ServerStyles } from '@mantine/ssr';
-const PreventiveCareImages= [ 
-    "", 
-    "", 
-    ""]
-function PreventiveCareComp() {
+
+function Cards() {
     const router = useRouter();
   return (
     <div className="App">
@@ -36,9 +33,8 @@ function PreventiveCareComp() {
                         activities on and around the fjords of Norway
                     </Text>
 
-                    <Button variant="light" color="blue" fullWidth mt="md" radius="md"
-                     onClick={()=> router.push('/Radiography')}>
-                        Learn More --
+                    <Button variant="light" color="blue" fullWidth mt="md" radius="md">
+                        Book classic tour now
                     </Button>
                 </Card>
 
@@ -47,8 +43,8 @@ function PreventiveCareComp() {
                     <Card shadow="sm" p="lg" radius="md" withBorder>
                             <Card.Section>
                                 <Image
-                                src="/images/vaccine1.PNG"
-                                height={300}
+                                src="https://images.unsplash.com/photo-1527004013197-933c4bb611b3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=720&q=80"
+                                height={160}
                                 alt="Norway"
                                 />
                             </Card.Section>
@@ -80,4 +76,4 @@ function PreventiveCareComp() {
   );
 } 
 
-export default PreventiveCareComp;
+export default Cards;

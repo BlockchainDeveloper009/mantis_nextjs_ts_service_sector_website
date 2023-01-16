@@ -13,6 +13,10 @@ import {
   Button,
   SimpleGrid,
   Title,
+  Anchor,
+  ActionIcon,
+  Flex,
+  Box,
 } from '@mantine/core';
 //import TableExample from './ManageWillsTable';
 //import ChipsExample from './ChipsExample';
@@ -28,6 +32,9 @@ import ChipsExample from './ChipsExample';
 import ApplicationContainer from '../pages/ApplicationContainer';
 import { useRouter } from 'next/navigation';
 import GeneralFooter from './GeneralFooter';
+import { DoubleHeaderColored } from './HeaderRibbon';
+import Cards from './Cards';
+import AdSellerCarousel from './AdSellerCarousel';
 
 // import Cards from './Cards';
 
@@ -52,8 +59,8 @@ function AppShellLinkExample() {
       navbarOffsetBreakpoint="sm"
       asideOffsetBreakpoint="sm"
       navbar={
-        <Navbar p="md" hiddenBreakpoint="sm" hidden={!opened} width={{ sm: 200, lg:200 }}>
-          <Title order={3}>Services</Title>
+        <Navbar p="md" hiddenBreakpoint="sm" hidden={!opened} width={{ sm: 200, lg:150 }}>
+          <Title order={3}>Our Services</Title>
           <Navbar.Section grow component={ScrollArea} mx="-xs" px="xs">
         {/* scrollable content here */}
             <div style={{display: "flex", flexDirection: "column"}}>
@@ -61,6 +68,7 @@ function AppShellLinkExample() {
                    <Link href="/PrimaryCare">
                       Primary Care
                     </Link>
+                   
                     <Link href="/Diagnostics">
                     Diagnostics
                     </Link>
@@ -76,12 +84,7 @@ function AppShellLinkExample() {
                     
                     
                
-                    <Link href="/ChipsExamplePage">
-                    ChipsExamplePage
-                    </Link>
-                    <Link href="/ChipsExample">
-                    ChipsExample
-                    </Link>
+               
                     <Link href="/CardsPage">
                     Cards
                     </Link>
@@ -103,8 +106,12 @@ function AppShellLinkExample() {
                      <Link href="/PreventiveCareClinic">
                       Preventive Care Clinic
                     </Link>
-                    
-                   
+                    <Anchor component="button" type="button">
+                      Anchor as button
+                    </Anchor>
+                    <Anchor href="https://mantine.dev/" target="_blank">
+                      Mantine docs
+                    </Anchor>
               </div>
 
           </Navbar.Section>
@@ -149,7 +156,7 @@ function AppShellLinkExample() {
       }
       header={
         <Header height={{ base: 50, md: 70 }} p="md">
-          <div style={{ display: 'flex', alignItems: 'center', height: '100%' }}>
+          <div style={{ display: 'flex', justifyContent:"space-around", alignItems: 'stretch', height: '100%' }}>
             <MediaQuery largerThan="sm" styles={{ display: 'none' }}>
               <Burger
                 opened={opened}
@@ -161,22 +168,28 @@ function AppShellLinkExample() {
             </MediaQuery>
 
            
-            
-            <SimpleGrid cols={7}>
+          
+            <SimpleGrid cols={7} sx={{ color: 'red', fontSize: 18, lineHeight: 1.4, padding:5 }}>
             
           <div><Text><Link href="/" >Amigos Vets</Link></Text></div>
-          <div><Text><Link href="/AboutUs" target={'_blank'}>AboutUs</Link></Text></div>
-          <div><Text><Link href="/Team" target={'_blank'}>Our Team</Link></Text></div>
-          <div><Text><Link href="/ContactUs" target={'_blank'}>ContactUs</Link></Text></div>
-          <div><Text><Link href="https://goo.gl/maps/z4JxxUxyLbo43riG8" target={'_blank'}>Get Directions</Link></Text></div>
+          <div><Text><Link href="/AboutUs">AboutUs</Link></Text></div>
+          <div><Text><Link href="/Team">Our Team</Link></Text></div>
+          <div><Text><Link href="/ContactUs">ContactUs</Link></Text></div>
+          {/* <ActionIcon component="a" href="https://goo.gl/maps/z4JxxUxyLbo43riG8" aria-label="Settings" >
+          Anchor element
+        </ActionIcon> */}
+          <div><Text><Link href="https://goo.gl/maps/z4JxxUxyLbo43riG8" target={'_blank'} >Get Directions</Link></Text></div>
           <div><Button styles = {(theme) => ({
-            root: {
+            root: { 
                 border: 0,
                 height: 50,
-                paddingRight: 60,
+                paddingRight: 30,
+                alignItems:'center',
+                
                 '&:hover': {
-                    paddingLeft:100 
-                }
+                    paddingLeft:40 
+                },
+                
             }
           })} variant="gradient" gradient={{ from: 'orange', to: 'red' }} onClick={()=> router.push('/BookAppointment')}>Book Appointment</Button></div>
 
@@ -186,17 +199,24 @@ function AppShellLinkExample() {
                 height: 50,
                 paddingRight: 60,
                 '&:hover': {
-                    paddingLeft:100 
+                    paddingLeft:40 
                 }
             }
           })} variant="gradient" gradient={{ from: 'orange', to: 'blue' }} onClick={()=> router.push('/OrderMedicine')}>Order Medicine</Button></div>
         </SimpleGrid>
         </div>
         </Header>
+
+        
       }
+      // header = {DoubleHeaderColored()}
+    
     >
-   
-      
+      {/* <Box>
+      <Flex> <Cards></Cards></Flex>
+      </Box> */}
+    
+    <AdSellerCarousel/>
     </AppShell>
    
     

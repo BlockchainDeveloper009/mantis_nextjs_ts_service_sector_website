@@ -43,7 +43,8 @@ function HospitalityServicesComp1() {
                         {GridDesc[0]}
                     </Text>
 
-                    <Button variant="light" color="blue" fullWidth mt="md" radius="md">
+                    <Button variant="light" color="blue" fullWidth mt="md" radius="md"
+                     onClick={()=> router.push('/BoardingAndGrooming')}>
                         Learn More --
                     </Button>
                 </Card>
@@ -70,7 +71,8 @@ function HospitalityServicesComp1() {
                         {GridDesc[1]}
                     </Text>
 
-                    <Button variant="light" color="blue" fullWidth mt="md" radius="md">
+                    <Button variant="light" color="blue" fullWidth mt="md" radius="md"
+                     onClick={()=> router.push('/DayCare')}>
                         Learn More --
                     </Button>
                 </Card>

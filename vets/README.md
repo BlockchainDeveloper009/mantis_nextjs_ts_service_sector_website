@@ -50,21 +50,33 @@ Chips Example
 5. Our Team page not created
 
 7. Align Surgery Services
-
+8. Appointment form: form two time fields, remove the one without validation
+9. Appointment form: default values asset and placeholders should be updated
 To do:
 completed tasks
 
-
-
+updating routing to sub pages from nav bar implemented
+ContactUs page to be created
 
 open tasks
 Create new Pages
 sub pages for Diagnostic Service Surgery S
 
+Additional side bar: 
+HelpfulLinks: 
+Faq, clinic policy
 
 write playwright tests
 Add timinggs in side bar
 
 Styling:
-add back button to Primary Care
-Dentistry
+add back button to parent pages from subpage for eg. 
+sub page <Dentistry> => Parent page <Primary Care>
+
+About uS : paragraph is not overlapped because of appshell
+
+
+Add tool tip
+add hover over button
+Highlight a few words using Mark tag
+Footer

@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 import HospitalityServicesComp1 from '../components/HospitalityServicesComp1';
 const thisPageHeader= 'Hospitality Services';
-function Radiography() {
+function Bronchoscopy() {
     const [value, setValue] = useState(['react']);
     // const { classes } = useStyles();
     useEffect(()=> {
@@ -14,9 +14,7 @@ function Radiography() {
 
   return (
     <div className="App">
-      <a>testing address .........</a>
-      <h1>filllers</h1>
-      <h1>filllers</h1>
+ <Box sx={{  color:'purple', fontSize: 18, lineHeight: 1.4, paddingTop: 100, paddingDown:200, paddingLeft:200, paddingRight:200,}}></Box>
       <Title order={1}> ----------------- {thisPageHeader}</Title>
         <h1>filllers</h1>
         {/* <DiagnosticServicesSimpleGrid/>  section container*/}
@@ -52,5 +50,5 @@ In some cases, we may need to sedate your pet or use short-acting general anesth
   );
 }
 
-export default Radiography;
+export default Bronchoscopy;
 

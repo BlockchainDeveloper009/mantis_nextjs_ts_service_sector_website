@@ -1,4 +1,4 @@
-import { Chip, createStyles, Title } from '@mantine/core';
+import { Box, Chip, createStyles, Title } from '@mantine/core';
 import { useEffect, useState } from "react";
 
 
@@ -14,9 +14,7 @@ function HospitalityServices() {
 
   return (
     <div className="App">
-      <a>testing address .........</a>
-      <h1>filllers</h1>
-      <h1>filllers</h1>
+      <Box sx={{  color:'purple', fontSize: 18, lineHeight: 1.4, paddingTop: 100, paddingDown:200, paddingLeft:200, paddingRight:200,}}></Box>
       <Title order={1}> ----------------- {thisPageHeader}</Title>
         <h1>filllers</h1>
         {/* <DiagnosticServicesSimpleGrid/> */}

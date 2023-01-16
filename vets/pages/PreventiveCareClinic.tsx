@@ -6,7 +6,7 @@ let petInjections= [
   '',
 ]
 const pageHeader ='Prevention Care'
-function PreventiveCare() {
+function PreventiveCareClinic() {
     const [value, setValue] = useState(['react']);
     // const { classes } = useStyles();
     useEffect(()=> {
@@ -16,7 +16,7 @@ function PreventiveCare() {
 
   return (
     <div className="App">
-      <a>testing address .........</a>
+      <Box sx={{  color:'purple', fontSize: 18, lineHeight: 1.4, paddingTop: 100, paddingDown:200, paddingLeft:200, paddingRight:200,}}></Box>
       <Title order={1}>   --------  ------            {pageHeader}</Title>
         <Cards></Cards>
         <Cards></Cards>
@@ -27,5 +27,5 @@ function PreventiveCare() {
   );
 }
 
-export default PreventiveCare;
+export default PreventiveCareClinic;
 

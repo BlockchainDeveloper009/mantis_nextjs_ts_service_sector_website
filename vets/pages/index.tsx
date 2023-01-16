@@ -2,7 +2,7 @@ import Head from 'next/head'
 
 import { Inter } from '@next/font/google'
 import styles from '../styles/Home.module.css'
-import { AspectRatio, Image, Spoiler } from '@mantine/core';
+import { AspectRatio, Box, Container, Image, Spoiler, Title } from '@mantine/core';
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
@@ -28,10 +28,36 @@ export default function Home() {
       
       </div>
       </AspectRatio>
+      <Box
+  sx={(theme) => ({
+    backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[0],
+    textAlign: 'center',
+    padding: theme.spacing.xl,
+    borderRadius: theme.radius.md,
+    
+    cursor: 'pointer',
+
+    '&:hover': {
+      backgroundColor:
+        theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[1],
+    },
+  })}
+>
+<Title order={1}> When is X-ray testing appropriate?</Title>
+        <p>
+        We may recommend veterinary X-rays as part of a diagnostic procedure if your pet is experiencing any health conditions or as a preventive measure in a routine senior wellness examination. 
+        We use radiology alone or in conjunction with other diagnostic tools depending on the patient’s condition. We’re fully equipped to perform routine radiology services to identify many types of illness or
+         injury when pets are sick or suffer a trauma.
+        </p>
+</Box>
       <Spoiler maxHeight={120} showLabel="Show more" hideLabel="Hide">
       {/* Content here */} sfsdffdsdf
     </Spoiler>
       <p>This is main page available</p>
+
+      <Container size="xs">
+    xs container with xs horizontal padding
+  </Container>
 
       </main>
     </>

@@ -7,6 +7,7 @@ function Faq() {
 
   return (
     <div className="App">
+      <Box sx={{  color:'purple', fontSize: 18, lineHeight: 1.4, paddingTop: 100, paddingDown:200, paddingLeft:200, paddingRight:200,}}></Box>
       <p>Quality affordable care to all pets
 Both walk-ins /appointments.
 All surgeries must be scheduled by appointments.

@@ -13,17 +13,19 @@ export default function App(props: AppProps) {
   return (
     <>
       <Head>
-        <title>Page title</title>
+        <title>Amigos Vets</title>
         <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
       </Head>
 
       <MantineProvider
         withGlobalStyles
         withNormalizeCSS
+       
         theme={{
           /** Put your mantine theme override here */
           colorScheme: 'light',
-          fontFamily: 'Open Sans',
+          fontFamily: 'Open Sans, sans-serif,Georgia serif',
+          
 
         }}
       >

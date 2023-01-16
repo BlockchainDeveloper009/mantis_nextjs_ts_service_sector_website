@@ -44,7 +44,7 @@ function SurgeryServicesCompR2() {
                     </Text>
 
                     <Button variant="light" color="blue" fullWidth mt="md" radius="md"
-                     onClick={()=> router.push('/Dentistry')}>
+                     onClick={()=> router.push('/Orthopedic Surgery')}>
                         Learn More --
                     </Button>
                 </Card>
@@ -72,7 +72,7 @@ function SurgeryServicesCompR2() {
                     </Text>
 
                     <Button variant="light" color="blue" fullWidth mt="md" radius="md"
-                     onClick={()=> router.push('/Dentistry')}>
+                     onClick={()=> router.push('/LaparoscopicSurgery')}>
                         Learn More --
                     </Button>
                 </Card>

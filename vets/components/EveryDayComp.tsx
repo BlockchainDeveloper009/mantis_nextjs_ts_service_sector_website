@@ -33,8 +33,9 @@ function EveryDayComp() {
                         activities on and around the fjords of Norway
                     </Text>
 
-                    <Button variant="light" color="blue" fullWidth mt="md" radius="md">
-                        Book classic tour now
+                    <Button variant="light" color="blue" fullWidth mt="md" radius="md"
+                     onClick={()=> router.push('/Radiography')}>
+                        Learn More --
                     </Button>
                 </Card>
 

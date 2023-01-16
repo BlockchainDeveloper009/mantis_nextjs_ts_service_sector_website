@@ -43,7 +43,8 @@ function TravelCertificatesCompR1() {
                         {GridDesc[0]}
                     </Text>
 
-                    <Button variant="light" color="blue" fullWidth mt="md" radius="md">
+                    <Button variant="light" color="blue" fullWidth mt="md" radius="md"
+                     onClick={()=> router.push(`/DomesticHealthCertificates`)}>
                         Learn More --
                     </Button>
                 </Card>
@@ -70,7 +71,8 @@ function TravelCertificatesCompR1() {
                         {GridDesc[1]}
                     </Text>
 
-                    <Button variant="light" color="blue" fullWidth mt="md" radius="md">
+                    <Button variant="light" color="blue" fullWidth mt="md" radius="md"
+                     onClick={()=> router.push('/InternationalHealthCertificates')}>
                         Learn More --
                     </Button>
                 </Card>
