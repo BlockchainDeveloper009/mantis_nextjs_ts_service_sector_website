@@ -60,7 +60,7 @@ function OrderMedicine() {
   
           })}
         >
-          <h1>&apos;'--&apos;'</h1>
+          <h1>j22222</h1>
       
           <h1>Order Medicine  Form- </h1>
           <h1>Sample page - Feature not readyMore time & Money to implement this feature</h1>

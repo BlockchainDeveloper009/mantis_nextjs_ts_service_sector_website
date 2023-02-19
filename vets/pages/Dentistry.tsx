@@ -29,10 +29,10 @@ How does it work?
 Teeth Exams, Cleaning and Polishing
 Dog and cat dental cleanings are very similar to human dental cleanings, except that we are required to use anesthesia to properly and safely examine and clean the teeth. After the cleaning, our veterinarians perform a thorough oral exam and check for signs of disease like gum loss, root exposure, or pockets around the root.
 
-Also similar to human dentistry, we do full mouth radiographs (x-rays) of your pet. This allows our veterinarians to be able to evaluate the roots of your pet&apos;'s teeth as well as any disease or abnormalities that are located below the gum line and not visible on examination alone.
+Also similar to human dentistry, we do full mouth radiographs (x-rays) of your pet. This allows our veterinarians to be able to evaluate the roots of your pet &apos;'&#39 s teeth as well as any disease or abnormalities that are located below the gum line and not visible on examination alone.
 
 Tooth Extractions
-We make every effort to save teeth that we feel have a chance to be successfully treated. In many circumstances, however, periodontal disease is so advanced that treatment without extraction is unsuccessful. We only extract teeth that in the doctor's opinion are beyond saving.
+We make every effort to save teeth that we feel have a chance to be successfully treated. In many circumstances, however, periodontal disease is so advanced that treatment without extraction is unsuccessful. We only extract teeth that in the doctor&#39's opinion are beyond saving.
 
 Minor Oral Surgery
 Many teeth require oral surgery to safely remove each individual root. We have extensive training and experience to perform these procedures properly. Pain medications are administered in clinic and provided for in-home aftercare.
