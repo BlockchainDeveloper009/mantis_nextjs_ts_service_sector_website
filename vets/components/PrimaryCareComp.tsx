@@ -21,7 +21,7 @@ const GridPreventiveCareImages= [
 function PrimaryCareComp() {
     const router = useRouter();
     const viewport = useRef<HTMLDivElement>(null);
-    const scrollToTop = () => viewport.current.scrollTo({ top: 0, behavior: 'smooth' });
+    // const scrollToTop = () => viewport.current.scrollTo({ top: 0, behavior: 'smooth' });
 
   return (
     <div className="App">
