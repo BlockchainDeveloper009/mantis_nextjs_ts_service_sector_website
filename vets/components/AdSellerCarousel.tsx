@@ -40,6 +40,7 @@ function AdSellerCarousel() {
                         <Image
                         src= {AdsSellerImages[0]}
                         height={imgHeight}
+                        fit="contain"
                         alt="Norway"
                         />
                     </Card.Section>
@@ -51,6 +52,7 @@ function AdSellerCarousel() {
                         <Image
                         src= {AdsSellerImages[1]}
                         height={imgHeight}
+                        fit="contain"
                         alt="Norway"
                         />
                     </Card.Section>
@@ -63,6 +65,7 @@ function AdSellerCarousel() {
                         <Image
                         src= {AdsSellerImages[2]}
                         height={imgHeight}
+                        fit="contain"
                         alt="Norway"
                         />
                     </Card.Section>

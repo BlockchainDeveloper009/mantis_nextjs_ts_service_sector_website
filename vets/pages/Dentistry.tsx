@@ -1,4 +1,4 @@
-import { Chip, createStyles } from '@mantine/core';
+import { Box, Chip, createStyles } from '@mantine/core';
 import { useEffect, useState } from "react";
 import Cards from '../components/Cards';
 import ChipsExample from '../components/ChipsExample';
@@ -12,7 +12,7 @@ function Dentistry() {
 
   return (
     <div className="App">
-      <a>testing address .........</a>
+      <Box sx={{  color:'purple', fontSize: 18, lineHeight: 1.4, paddingTop: 100, paddingDown:200, paddingLeft:200, paddingRight:200,}}>
         <p>
         Overview
 Studies show that 50% of all dogs and cats have some form of periodontal disease. That number jumps to 80% in pets that are 3 years of age or older. If left untreated, periodontal disease can cause infection, pain, and tooth loss over time. It can also lead to serious health problems like microscopic changes in the heart, liver, and kidneys. Because of this, we recommend an annual veterinary dental healthcare examination for all pets.
@@ -37,6 +37,7 @@ We make every effort to save teeth that we feel have a chance to be successfully
 Minor Oral Surgery
 Many teeth require oral surgery to safely remove each individual root. We have extensive training and experience to perform these procedures properly. Pain medications are administered in clinic and provided for in-home aftercare.
         </p>
+        </Box>
     </div>
   );
 }

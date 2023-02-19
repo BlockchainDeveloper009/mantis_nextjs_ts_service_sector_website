@@ -14,11 +14,12 @@ function PrimaryCare() {
 
   return (
     <div className="App">
-      <Box sx={{  color:'purple', fontSize: 18, lineHeight: 1.4, paddingTop: 100, paddingDown:200, paddingLeft:200, paddingRight:200,}}></Box>
-      <h1>{PageHeader}</h1>
-      <Title order={1}>   --------  ------            {PageHeader}</Title>
-      <h1>{PageHeader}</h1>
+      <Box sx={{  color:'purple', fontSize: 18, lineHeight: 1.4, paddingTop: 100, paddingDown:200, paddingLeft:200, paddingRight:200,}}>
+      
+      <Title order={1}> {PageHeader}</Title>
+      
        <PrimaryCareComp />
+       </Box>
     </div>
   );
 }

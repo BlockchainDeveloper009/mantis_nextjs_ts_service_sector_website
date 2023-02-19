@@ -80,3 +80,5 @@ Add tool tip
 add hover over button
 Highlight a few words using Mark tag
 Footer
+
+add google review link to application side bar

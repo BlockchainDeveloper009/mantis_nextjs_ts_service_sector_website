@@ -59,31 +59,31 @@ function AppShellLinkExample() {
       navbarOffsetBreakpoint="sm"
       asideOffsetBreakpoint="sm"
       navbar={
-        <Navbar p="md" hiddenBreakpoint="sm" hidden={!opened} width={{ sm: 200, lg:150 }}>
+        <Navbar p="md" hiddenBreakpoint="sm" hidden={!opened} width={{ sm: 200, lg:175  }}>
           <Title order={3}>Our Services</Title>
           <Navbar.Section grow component={ScrollArea} mx="-xs" px="xs">
         {/* scrollable content here */}
-            <div style={{display: "flex", flexDirection: "column"}}>
-                 
-                   <Link href="/PrimaryCare">
+            <div style={{display: "flex", flexDirection: "column", padding:15 }}>
+           
+                   <Link href="/PrimaryCare"  style={{padding:5 }} >
                       Primary Care
                     </Link>
                    
-                    <Link href="/Diagnostics">
+                    <Link href="/Diagnostics"  style={{padding:5 }} >
                     Diagnostics
                     </Link>
-                    <Link href="/SurgeryServices">
+                    <Link href="/SurgeryServices"  style={{padding:5 }} >
                     Surgery Services
                     </Link>
-                    <Link href="/TravelCertificates">
+                    <Link href="/TravelCertificates"  style={{padding:5 }} >
                     Travel Certificates
                     </Link>
-                    <Link href="/HospitalityServices">
+                    <Link href="/HospitalityServices"  style={{padding:5 }} >
                     Hospitality Services
                     </Link>
+                </div>    
                     
-                    
-               
+                <div style={{display: "flex", flexDirection: "column", padding:15 }}>
                
                     <Link href="/CardsPage">
                     Cards

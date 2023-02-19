@@ -14,7 +14,7 @@ function Endoscopy() {
 
   return (
     <div className="App">
-      <Box sx={{  color:'purple', fontSize: 18, lineHeight: 1.4, paddingTop: 100, paddingDown:200, paddingLeft:200, paddingRight:200,}}></Box>
+      <Box sx={{  color:'purple', fontSize: 18, lineHeight: 1.4, paddingTop: 100, paddingDown:200, paddingLeft:200, paddingRight:200,}}>
       <Title order={1}> ----------------- {thisPageHeader}</Title>
         <h1>filllers</h1>
         {/* <DiagnosticServicesSimpleGrid/>  section container*/}
@@ -45,7 +45,7 @@ X-rays can be used to detect a variety of ailments in animals including arthriti
 In some cases, we may need to sedate your pet or use short-acting general anesthesia.
        </section>
        </Box>
-        {/* <Cards></Cards> */}
+       </Box>
     </div>
   );
 }
