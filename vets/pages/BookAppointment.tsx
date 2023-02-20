@@ -1,4 +1,4 @@
-import { Box, Button, Select, Textarea, TextInput } from "@mantine/core";
+import { Box, Button, Select, Textarea, TextInput, Title } from "@mantine/core";
 import { useState } from 'react';
 import { useForm } from '@mantine/form';
 import { Calendar, TimeInput, TimeRangeInput } from '@mantine/dates';
@@ -25,10 +25,14 @@ function BookAppointment() {
     }
     const form = useForm({
       initialValues: {
-        willStartDate: '',
-        willEndDate: '',
-        Benefitor: '0x',
-        AssetId: '1',
+        petOwnerLastName: '',
+        petOwnerFirstName: '',
+        petName: '',
+        petBreed: '',
+        email: '',
+        contactNumber:'',
+        ReasonForVisit: '',
+
         // AssetId: [
         //   { name: 'Banana', available: true },
         //   { name: 'Orange', available: false },
@@ -36,18 +40,22 @@ function BookAppointment() {
       },
   
       transformValues: (values) => ({
-        AssetId: `${values.AssetId}`,
-        willStartDate: `${values.willStartDate}`,
-        willEndDate: `${values.willEndDate}`,
-        Benefitor: `${values.Benefitor}`,
+        petOwnerLastName: `${values.petOwnerLastName}`,
+        petOwnerFirstName: `${values.petOwnerFirstName}`,
+        petName: `${values.petName}`,
+        petBreed: `${values.petBreed}`,
+        email: `${values.email}`,
+        contactNumber: `${values.contactNumber}`,
+        ReasonForVisit: `${values.ReasonForVisit}`,
       }),
     });
   
     
     const willDatas = Array(50).fill(0).map((_, index) => `Item ${index}`);
     const [time, setTIme] = useState<any>(new Date());
+    const thisPageHeader = "Appointment Form";
     return (
-      <Box sx={{ maxWidth: 400 }} mx="auto">
+      <Box sx={{ maxWidth: 400,paddingTop:200}} mx="auto" >
         
       
           <form
@@ -61,16 +69,15 @@ function BookAppointment() {
   
           })}
         >
-          <h1>h111111111111111111</h1>
-          <h1>h222222</h1>
-          <h1>Appointment Form</h1>
+          <Title order={1} > {thisPageHeader}</Title>
+          
           <TextInput
             
             label="Pet Owner's First Name/Nombre"
-            placeholder="AssetId"
+            placeholder="Will"
             mt="md"
             withAsterisk
-            {...form.getInputProps('AssetId')}
+            {...form.getInputProps('petOwnerFirstName')}
             // rightSection={<Loader size="xs" />}
             
             // onBlur={(event) => ValidateUserAssetId(event.currentTarget.value)}
@@ -79,10 +86,10 @@ function BookAppointment() {
           <TextInput
             
             label="Last Name/Nombre"
-            placeholder="AssetId"
+            placeholder="Smith"
             mt="md"
             withAsterisk
-            {...form.getInputProps('AssetId')}
+            {...form.getInputProps('petOwnerLastName')}
             // rightSection={<Loader size="xs" />}
             
             // onBlur={(event) => ValidateUserAssetId(event.currentTarget.value)}
@@ -94,7 +101,7 @@ function BookAppointment() {
             placeholder="Meow"
             mt="md"
             withAsterisk
-            {...form.getInputProps('AssetId')}
+            {...form.getInputProps('petName')}
             // rightSection={<Loader size="xs" />}
             
             // onBlur={(event) => ValidateUserAssetId(event.currentTarget.value)}
@@ -102,7 +109,7 @@ function BookAppointment() {
           />
                 <Select 
             label="Pet Type/Dog"
-            placeholder="Pitbull"
+            placeholder="Dog/ Cat"
             value={assetId}
             onChange={()=>setAssetId}
             data = {assets}
@@ -116,7 +123,7 @@ function BookAppointment() {
             placeholder="German Sheperd"
             mt="md"
             withAsterisk
-            {...form.getInputProps('AssetId')}
+            {...form.getInputProps('petBreed')}
             // rightSection={<Loader size="xs" />}
             
             // onBlur={(event) => ValidateUserAssetId(event.currentTarget.value)}
@@ -125,10 +132,10 @@ function BookAppointment() {
             <TextInput
             
             label="Email"
-            placeholder="AssetId"
+            placeholder="johndoe@gmail.com"
             mt="md"
             withAsterisk
-            {...form.getInputProps('AssetId')}
+            {...form.getInputProps('email')}
             // rightSection={<Loader size="xs" />}
             
             // onBlur={(event) => ValidateUserAssetId(event.currentTarget.value)}
@@ -137,10 +144,10 @@ function BookAppointment() {
             <TextInput
             
             label="Contact Number/Numero De Telefono"
-            placeholder="AssetId"
+            placeholder="555-55-5555"
             mt="md"
             withAsterisk
-            {...form.getInputProps('AssetId')}
+            {...form.getInputProps('contactNumber')}
             // rightSection={<Loader size="xs" />}
             
             // onBlur={(event) => ValidateUserAssetId(event.currentTarget.value)}
@@ -148,7 +155,7 @@ function BookAppointment() {
           />
           <Select 
             label="Reason For Visit/Rason De La Visita"
-            placeholder="ca-01"
+            placeholder="Vaccine"
             value={assetId}
             onChange={()=>setAssetId}
             data = {assets}
