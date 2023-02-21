@@ -45,7 +45,18 @@ export default function Home() {
 >
 <Title order={1}> Welcome to Amigos pet clinic</Title>
         <p>
-        We are providing great service at low cost in greater Pasadena, Houston for few years
+        We are providing great service at low cost in greater Pasadena, Houston for few years.
+
+        </p>
+        <br>
+        
+        </br>
+        <p>
+        Quality affordable care to all pets Both walk-ins /appointments. 
+        All surgeries must be scheduled by appointments. We require prior examination of the pet before scheduling surgery.
+         We don’t accept checks. For you and others protection, all dogs must be on a leash and properly restrained while in the clinic /premises. 
+         All cats must be in an appropriate carrier. 
+        Please keep an eye on your pets at all times.
         </p>
 </Box>
       {/* <Spoiler maxHeight={120} showLabel="Show more" hideLabel="Hide">
