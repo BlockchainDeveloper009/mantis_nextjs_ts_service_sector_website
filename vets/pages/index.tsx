@@ -43,7 +43,7 @@ export default function Home() {
     },
   })}
 >
-<Title order={1}> Welcome to Amigo's pet clinic</Title>
+<Title order={1}> Welcome to Amigos pet clinic</Title>
         <p>
         We are providing great service at low cost in greater Pasadena, Houston for few years
         </p>
