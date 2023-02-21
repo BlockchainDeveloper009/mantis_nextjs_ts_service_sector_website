@@ -62,9 +62,9 @@ function BookAppointment() {
           onSubmit={form.onSubmit((values) => {
             setSubmittedValues(JSON.stringify(values, null, 2))
             
-            setWillStartDate(values.willStartDate)
-            setWillEndDate(values.willEndDate)
-            setbenefitorAddr(values.Benefitor)
+            // setWillStartDate(values.willStartDate)
+            // setWillEndDate(values.willEndDate)
+            // setbenefitorAddr(values.Benefitor)
            
   
           })}

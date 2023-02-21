@@ -50,7 +50,7 @@ export default function Home() {
 </Box>
       {/* <Spoiler maxHeight={120} showLabel="Show more" hideLabel="Hide">
       {/* Content here */} 
-    {/* </Spoiler> */}
+    {/* </Spoiler> */}//deploy-vets-2023feb20-v8
       
 
       {/* <Container size="xs">
