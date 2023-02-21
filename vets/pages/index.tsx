@@ -43,21 +43,19 @@ export default function Home() {
     },
   })}
 >
-<Title order={1}> When is X-ray testing appropriate?</Title>
+<Title order={1}> Welcome to Amigo's pet clinic</Title>
         <p>
-        We may recommend veterinary X-rays as part of a diagnostic procedure if your pet is experiencing any health conditions or as a preventive measure in a routine senior wellness examination. 
-        We use radiology alone or in conjunction with other diagnostic tools depending on the patient’s condition. We’re fully equipped to perform routine radiology services to identify many types of illness or
-         injury when pets are sick or suffer a trauma.
+        We are providing great service at low cost in greater Pasadena, Houston for few years
         </p>
 </Box>
-      <Spoiler maxHeight={120} showLabel="Show more" hideLabel="Hide">
-      {/* Content here */} sfsdffdsdf
-    </Spoiler>
-      <p>This is main page available</p>
+      {/* <Spoiler maxHeight={120} showLabel="Show more" hideLabel="Hide">
+      {/* Content here */} 
+    {/* </Spoiler> */}
+      
 
-      <Container size="xs">
+      {/* <Container size="xs">
     xs container with xs horizontal padding
-  </Container>
+  </Container>  */}
 
       </main>
     </>

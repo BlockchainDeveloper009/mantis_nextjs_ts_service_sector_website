@@ -5,6 +5,8 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useRef } from 'react';
 
+import  {gridData}  from '../hooks/gridData';
+
 //import { createStylesServer, ServerStyles } from '@mantine/ssr';
 const GridHeaders= ['Dentistry','Parasite Control (Fleas, Ticks & Heartworms)','Microchipping', 'Wellness & Preventive Care']
 const GridDesc= [
@@ -14,15 +16,51 @@ const GridDesc= [
 'Annual wellness exams evaluate your pets overall health, detect problems before they become serious, and keep them on track to live a long, healthy life.',
 ''
 ]
+
 const GridPreventiveCareImages= [ 
     "/images/Dentistry1.PNG", 
     "/images/Fleas1.PNG", 
     "/images/1.PNG"]
+    const grid = [
+        new gridData(GridDesc[0],GridHeaders[0],"/images/Dentistry1.PNG","Dentistry"),
+        new gridData(GridDesc[1],GridHeaders[1],"/images/Fleas1.PNG","jj"),
+        new gridData(GridDesc[2],GridHeaders[2],"/images/1.PNG","jj")
+    ]
 function PrimaryCareComp() {
     const router = useRouter();
     const viewport = useRef<HTMLDivElement>(null);
     // const scrollToTop = () => viewport.current.scrollTo({ top: 0, behavior: 'smooth' });
+    let np="";
+const features = grid.map((m) => {
+    <Grid.Col span={4} styles={{maxWdith: 350}} sm={4} xs={4}>
+    <Card shadow="sm" p="lg" radius="md" withBorder>
+        <Card.Section>
+            <Image
+            src={m.imageurl}
+            height={160}
+            alt="Norway"
+            />
+        </Card.Section>
 
+        <Group position="apart" mt="md" mb="xs">
+            <Text weight={500}>{m.header}</Text>
+            <Badge color="pink" variant="light">
+            On Sale
+            </Badge>
+        </Group>
+
+        <Text size="sm" color="dimmed">
+            {m.desc1}
+        </Text>
+        { np = m.nextPage}
+        <Button variant="light" color="blue" fullWidth mt="md" radius="md"
+         onClick={()=> router.push('/'+{np})}>
+            Learn More --
+        </Button>
+    </Card>
+
+</Grid.Col> 
+})
   return (
     <div className="App">
         
@@ -30,34 +68,7 @@ function PrimaryCareComp() {
         <ScrollArea style={{ width: 1000, height: 5000 }} viewportRef={viewport}>
         {/* ... content */}
       
-            <Grid.Col span={4} styles={{maxWdith: 350}} sm={4} xs={4}>
-                <Card shadow="sm" p="lg" radius="md" withBorder>
-                    <Card.Section>
-                        <Image
-                        src={GridPreventiveCareImages[0]}
-                        height={160}
-                        alt="Norway"
-                        />
-                    </Card.Section>
-
-                    <Group position="apart" mt="md" mb="xs">
-                        <Text weight={500}>{GridHeaders[0]}</Text>
-                        <Badge color="pink" variant="light">
-                        On Sale
-                        </Badge>
-                    </Group>
-
-                    <Text size="sm" color="dimmed">
-                        {GridDesc[0]}
-                    </Text>
-
-                    <Button variant="light" color="blue" fullWidth mt="md" radius="md"
-                     onClick={()=> router.push('/Dentistry')}>
-                        Learn More --
-                    </Button>
-                </Card>
-
-            </Grid.Col>
+           
 
 
            

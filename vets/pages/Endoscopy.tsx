@@ -15,7 +15,7 @@ function Endoscopy() {
   return (
     <div className="App">
       <Box sx={{  color:'purple', fontSize: 18, lineHeight: 1.4, paddingTop: 100, paddingDown:200, paddingLeft:200, paddingRight:200,}}>
-      <Title order={1}> ----------------- {thisPageHeader}</Title>
+      <Title order={1}> {thisPageHeader}</Title>
         <h1>filllers</h1>
         {/* <DiagnosticServicesSimpleGrid/>  section container*/}
         

@@ -85,14 +85,12 @@ function AppShellLinkExample() {
                     
                 <div style={{display: "flex", flexDirection: "column", padding:15 }}>
                
-                    <Link href="/CardsPage">
-                    Cards
-                    </Link>
+          
                     <Link href="/AdvancedCare">
                       Advanced Care
                     </Link>
                     <Link href="/ApplicationContainer">
-                      Canine and Feline Diabetes
+                      Feline Diabetes
                     </Link>
                     <Link href="/ApplicationContainer">
                       Pet Boarding
@@ -106,12 +104,12 @@ function AppShellLinkExample() {
                      <Link href="/PreventiveCareClinic">
                       Preventive Care Clinic
                     </Link>
-                    <Anchor component="button" type="button">
+                    {/* <Anchor component="button" type="button">
                       Anchor as button
                     </Anchor>
                     <Anchor href="https://mantine.dev/" target="_blank">
                       Mantine docs
-                    </Anchor>
+                    </Anchor> */}
               </div>
 
           </Navbar.Section>
@@ -120,7 +118,7 @@ function AppShellLinkExample() {
       aside={
         <MediaQuery smallerThan="sm" styles={{ display: 'none' }}>
           <Aside p="md" hiddenBreakpoint="sm" width={{ sm: 200, lg: 150 }}>
-            <Text>Application sidebar</Text>
+            <Text>Others</Text>
             
            
            <Link href="/Helpfullinks">
@@ -169,7 +167,7 @@ function AppShellLinkExample() {
 
            
           
-            <SimpleGrid cols={7} sx={{ color: 'red', fontSize: 18, lineHeight: 1.4, padding:5 }}>
+            <SimpleGrid cols={7} sx={{ color: 'Orange', fontSize: 18, lineHeight: 1.4, padding:5 }}>
             
           <div><Text><Link href="/" >Amigos Vets</Link></Text></div>
           <div><Text><Link href="/AboutUs">AboutUs</Link></Text></div>

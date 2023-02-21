@@ -15,6 +15,8 @@ We don’t accept checks.
 For you and others protection, all dogs must be on a leash and properly restrained while in the clinic /premises.
 All cats must be in an appropriate carrier.
 Please keep an eye on your pets at all times.</p>
+
+p
         
     </div>
   );
