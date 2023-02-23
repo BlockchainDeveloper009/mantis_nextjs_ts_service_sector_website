@@ -1,4 +1,4 @@
-import { Box, Chip, createStyles, Spoiler } from '@mantine/core';
+import { Box, Text, Button, Chip, createStyles, Spoiler, Stack, Title } from '@mantine/core';
 import { useEffect, useState } from "react";
 import Cards from '../components/Cards';
 import ChipsExample from '../components/ChipsExample';
@@ -32,15 +32,23 @@ function ContactUs() {
         </article>
    
 
-    <Box>
+        <Box sx={{ maxWidth: 400,paddingTop:200}} mx="auto">
 
 
-      
-     sedon quality evidence-basedmodernveterinary care, client education, and friendly, personal service. The hospital received accreditation by the American Animal Hospital Association in 1994 and was awarded the highest of three levels of accreditation.
-        
+    
  
-      
-    </Box>
+<Title order={1} >Contact Us</Title>
+
+ <Stack sx={(theme) => ({ backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.colors.gray[0], height: 300 })}>
+
+<Button variant="outline">Email : amigopets@gmail.com</Button>
+<Button variant="outline">Mobile : 832-991-8811 </Button>
+<Button variant="outline"> <a href='https://goo.gl/maps/8QJQLefRw1aWbfAR9'>4215 Spencer Hwy, Pasadena, TX 77504</a></Button>
+</Stack>
+
+
+
+</Box>
        
     </div>
   );

@@ -17,6 +17,7 @@ import {
   ActionIcon,
   Flex,
   Box,
+  Stack,
 } from '@mantine/core';
 //import TableExample from './ManageWillsTable';
 //import ChipsExample from './ChipsExample';
@@ -59,7 +60,7 @@ function AppShellLinkExample() {
       navbarOffsetBreakpoint="sm"
       asideOffsetBreakpoint="sm"
       navbar={
-        <Navbar p="md" hiddenBreakpoint="sm" hidden={!opened} width={{ sm: 200, lg:175  }}>
+        <Navbar p="md" hiddenBreakpoint="sm" hidden={!opened} width={{ sm: 300, lg:200  }}>
           <Title order={3}>Our Services</Title>
           <Navbar.Section grow component={ScrollArea} mx="-xs" px="xs">
         {/* scrollable content here */}
@@ -86,24 +87,22 @@ function AppShellLinkExample() {
                 <div style={{display: "flex", flexDirection: "column", padding:15 }}>
                
           
-                    <Link href="/AdvancedCare">
-                      Advanced Care
+                    <Link href="/AdvancedCare" style={{padding:5 }}>
+                     Pricing & Packages
                     </Link>
-                    <Link href="/ApplicationContainer">
+                    <Link href="/ApplicationContainer" style={{padding:5 }}>
                       Feline Diabetes
                     </Link>
-                    <Link href="/ApplicationContainer">
+                    <Link href="/PetBoarding" style={{padding:5 }}>
                       Pet Boarding
                     </Link>
-                    <Link href="/PetCounseling">
+                    <Link href="/PetCounseling" style={{padding:5 }}>
                       Pet Counseling
                     </Link>
-                    <Link href="/PreventiveCare">
+                    <Link href="/PreventiveCare" style={{padding:5 }}>
                       Preventive Care
                     </Link>
-                     <Link href="/PreventiveCareClinic">
-                      Preventive Care Clinic
-                    </Link>
+     
                     {/* <Anchor component="button" type="button">
                       Anchor as button
                     </Anchor>
@@ -118,28 +117,28 @@ function AppShellLinkExample() {
       aside={
         <MediaQuery smallerThan="sm" styles={{ display: 'none' }}>
           <Aside p="md" hiddenBreakpoint="sm" width={{ sm: 200, lg: 150 }}>
-            <Text>Others</Text>
             
-           
+
+           <Stack sx={(theme) => ({ backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.colors.gray[0], height: 300 })}>
+           <Title order={4}>Others</Title>
            <Link href="/Helpfullinks">
-             Helpful Links
+             
+             <Text  c="cyan">Helpful Links</Text>
            </Link>
            <Link href="/Faq">
-             FAQ
+           <Text  c="cyan"> FAQ</Text>
+            
            </Link>
            <Link href="/ClinicPolicy">
-           Clinic Policy
+           <Text  c="cyan"> Clinic Policy</Text>
+          
            </Link>
-           <Text>  </Text>
-           <Text></Text>
-           <Text></Text>
-           <label>Timings:</label>
-          <Text>
-            
-            Mon-Fri : 8am - 6pm
-            Sat     : 8am - 5pm
-            Sun: Holiday
-          </Text>
+           
+           <Title order={4}>Clinic Hours</Title>
+           <Text  c="blue"> Mon-Fri : 8am - 6pm </Text>
+           <Text  c="teal.4">Sat : 8am - 5pm</Text>
+           <Text  c="teal.4">Sun: Holiday</Text>
+         </Stack>
            
           </Aside>
         </MediaQuery>
@@ -167,7 +166,15 @@ function AppShellLinkExample() {
 
            
           
-            <SimpleGrid cols={7} sx={{ color: 'Orange', fontSize: 18, lineHeight: 1.4, padding:5 }}>
+            <SimpleGrid cols={7} sx={{ color: 'blue', fontSize: 18, lineHeight: 1.4, padding:5 }}
+            
+            spacing="lg"
+            breakpoints={[
+              { maxWidth: 980, cols: 3, spacing: 'md' },
+              { maxWidth: 755, cols: 2, spacing: 'sm' },
+              { maxWidth: 600, cols: 1, spacing: 'sm' },
+            ]}
+            >
             
           <div><Text><Link href="/" >Amigos Vets</Link></Text></div>
           <div><Text><Link href="/AboutUs">AboutUs</Link></Text></div>

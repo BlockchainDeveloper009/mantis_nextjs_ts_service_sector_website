@@ -2,21 +2,28 @@ import { Box, Button, Select, Textarea, TextInput, Title } from "@mantine/core";
 import { useState } from 'react';
 import { useForm } from '@mantine/form';
 import { Calendar, TimeInput, TimeRangeInput } from '@mantine/dates';
+import { useRouter } from "next/router";
 //import { GitHubLogoIcon } from '@modulz/radix-icons';
 
 function BookAppointment() {
 
   
     
-    const [assetId, setAssetId] = useState('');
-    const [willStartDate, setWillStartDate] = useState('');
-    const [willEndDate, setWillEndDate] = useState('');
-    const [benefitorAddr, setbenefitorAddr] = useState('');
+    
+    const [petOwnerLastName, setpetOwnerLastName] = useState('');
+    const [petOwnerFirstName, setpetOwnerFirstName] = useState('');
+    const [petName, setpetName] = useState('');
+    const [petBreed, setPetbreed] = useState('');
+    const [clientEmail, setClientEmail] = useState('');
+    const [contactNumber, setContactNumber] = useState('');
+    const [ReasonForVisit, setReasonForVisit] = useState('');
+    const [appointmentDate, setappointmentDate] = useState('');
+    const [appointmentTime, setappointmentTime] = useState('');
     const [specialInstructions, setSpecialInstructions] = useState('');
     
   
     const [submittedValues, setSubmittedValues] = useState('');
-    let assets = [
+    let possibleReasonForVisits = [
         'General Visit','Vaccine','Emergency Care', 'Others'
          ];
   
@@ -32,6 +39,8 @@ function BookAppointment() {
         email: '',
         contactNumber:'',
         ReasonForVisit: '',
+        appointmentDate: '',
+        appointmentTime: '',
 
         // AssetId: [
         //   { name: 'Banana', available: true },
@@ -47,9 +56,33 @@ function BookAppointment() {
         email: `${values.email}`,
         contactNumber: `${values.contactNumber}`,
         ReasonForVisit: `${values.ReasonForVisit}`,
+        appointmentDate: `${values.appointmentDate}`,
+        appointmentTime: `${values.appointmentTime}`
       }),
     });
-  
+    const router = useRouter();
+    const handleSubmit = () => { 
+     
+      console.log('Sending')
+      let name = 'Appointment Confirmation'
+      let email = 'sent by Amigos Vets'
+      let message = `Your Appointment has been scheduled. Details entered by you -> ${petOwnerLastName} -> ${petName} ->${ReasonForVisit}`
+      
+    let data = {
+        name,
+        email,
+        message
+      }
+      fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json, text/plain, */*',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      })
+      router.push('/ConfirmAppointment')
+    }
     
     const willDatas = Array(50).fill(0).map((_, index) => `Item ${index}`);
     const [time, setTIme] = useState<any>(new Date());
@@ -62,10 +95,11 @@ function BookAppointment() {
           onSubmit={form.onSubmit((values) => {
             setSubmittedValues(JSON.stringify(values, null, 2))
             
-            // setWillStartDate(values.willStartDate)
-            // setWillEndDate(values.willEndDate)
-            // setbenefitorAddr(values.Benefitor)
-           
+             setpetOwnerLastName(values.petOwnerLastName)
+             setReasonForVisit(values.petOwnerFirstName)
+             setpetName(values.petName)
+            setappointmentDate(values.appointmentDate)
+            setappointmentTime(values.appointmentTime)
   
           })}
         >
@@ -110,11 +144,11 @@ function BookAppointment() {
                 <Select 
             label="Pet Type/Dog"
             placeholder="Dog/ Cat"
-            value={assetId}
-            onChange={()=>setAssetId}
-            data = {assets}
+            // value={assetId}
+            onChange={()=>setpetName}
+            data = {possibleReasonForVisits}
             //{[{value:'testData'}]}
-            //assets.length>=0 ? assets : [{value:'testData'}]   
+            //assets.length>=0 ? assets : [{value:'testData'}]   \
             
           />
           <TextInput
@@ -156,9 +190,9 @@ function BookAppointment() {
           <Select 
             label="Reason For Visit/Rason De La Visita"
             placeholder="Vaccine"
-            value={assetId}
-            onChange={()=>setAssetId}
-            data = {assets}
+            // value={assetId}
+            onChange={()=>setReasonForVisit}
+            data = {possibleReasonForVisits}
             //{[{value:'testData'}]}
             //assets.length>=0 ? assets : [{value:'testData'}]   
             
@@ -202,7 +236,7 @@ function BookAppointment() {
             // onBlur={(event) => ValidateUserAssetId(event.currentTarget.value)}
           
           />  
-          <Button type="submit" mt="md">
+          <Button type="submit" mt="md" onClick={handleSubmit} >
             Submit
           </Button>
 
@@ -210,7 +244,7 @@ function BookAppointment() {
        
       </Box>
     );
-  
+    
   }
   
   export default BookAppointment;

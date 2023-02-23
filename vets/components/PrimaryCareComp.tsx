@@ -65,7 +65,7 @@ const features = grid.map((m) => {
     <div className="App">
         
         <Grid justify="Center">
-        <ScrollArea style={{ width: 1000, height: 5000 }} viewportRef={viewport}>
+        {/* <ScrollArea style={{ width: 1000, height: 5000 }} viewportRef={viewport}> </ScrollArea>*/}
         {/* ... content */}
       
            
@@ -132,7 +132,7 @@ const features = grid.map((m) => {
                            
                         </Card>
             </Grid.Col>
-            </ScrollArea>
+            
         </Grid>
         
     </div>      

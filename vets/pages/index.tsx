@@ -2,7 +2,8 @@ import Head from 'next/head'
 
 import { Inter } from '@next/font/google'
 import styles from '../styles/Home.module.css'
-import { AspectRatio, Box, Container, Image, Spoiler, Title } from '@mantine/core';
+import { AspectRatio, Blockquote, Box, Container, Image, Spoiler, Title } from '@mantine/core';
+import { IconFlame } from '@tabler/icons';
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
@@ -29,20 +30,21 @@ export default function Home() {
       </div>
       </AspectRatio>
       <Box
-  sx={(theme) => ({
-    backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[0],
-    textAlign: 'center',
-    padding: theme.spacing.xl,
-    borderRadius: theme.radius.md,
-    
-    cursor: 'pointer',
+      mx="auto"
+        sx={(theme) => ({
+          backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[0],
+          textAlign: 'center',
+          padding: theme.spacing.xl,
+          borderRadius: theme.radius.md,
+          
+          cursor: 'pointer',
 
-    '&:hover': {
-      backgroundColor:
-        theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[1],
-    },
-  })}
->
+          '&:hover': {
+            backgroundColor:
+              theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[1],
+          },
+        })}
+      >
 <Title order={1}> Welcome to Amigos pet clinic</Title>
         <p>
         We are providing great service at low cost in greater Pasadena, Houston for few years.
@@ -52,9 +54,17 @@ export default function Home() {
         
         </br>
         <p>
+       
+        </p>
+        <Blockquote cite="– Owner" icon={<IconFlame size={24} />}>
         Quality affordable care to all pets Both walk-ins /appointments. 
+        </Blockquote>
+        <p>
         All surgeries must be scheduled by appointments. We require prior examination of the pet before scheduling surgery.
-         We don’t accept checks. For you and others protection, all dogs must be on a leash and properly restrained while in the clinic /premises. 
+        </p>
+        <br></br>
+        <p>
+                 We don’t accept checks. For you and others protection, all dogs must be on a leash and properly restrained while in the clinic /premises. 
          All cats must be in an appropriate carrier. 
         Please keep an eye on your pets at all times.
         </p>
