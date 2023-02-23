@@ -135,8 +135,8 @@ function AppShellLinkExample() {
            </Link>
            
            <Title order={4}>Clinic Hours</Title>
-           <Text  c="blue"> Mon-Fri : 8am - 6pm </Text>
-           <Text  c="teal.4">Sat : 8am - 5pm</Text>
+           <Text  c="blue"> Mon-Fri : 8am - 5pm </Text>
+           <Text  c="teal.4">Sat : 8am - 3pm</Text>
            <Text  c="teal.4">Sun: Holiday</Text>
          </Stack>
            

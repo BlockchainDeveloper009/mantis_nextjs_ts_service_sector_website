@@ -24,6 +24,17 @@ function AdvancedCare() {
       { position: 'ADULT ANNUAL PACK', Treatment: 'DHLPP + RABIES + BORDATELLA + HEARTWORM TEST', Price: '$89' },
      
     ];
+    const catPackagePricing = [
+      { position: 'CHIP', Treatment: 'MICROCHIP + REGISTRATION', Price: '$39' },
+      { position: 'CAT PACK 2', Treatment: 'RABIES\n FELINE LEUKEMIA RHINOTRACHEITIS CALICIVIRUS \n PANLEUKOPENA CHLAMYDOPHILA ', Price: '$45' },
+      { position: ' ANNUAL CAT PACK 3', Treatment: 'DHPP + BORDETELLA', Price: '$75' },
+      { position: 'PUPPY PACK 4', Treatment: 'xray', Price: '$99' },
+      { position: 'Others', Treatment: 'X-RAY STARTS AT $99', Price: '$99' },
+      { position: 'Others', Treatment: 'BLOOD WORK STARTS ', Price: '$99' },
+      { position: 'Others', Treatment: 'THYROID TEST', Price: '$55' },
+      { position: 'Others', Treatment: 'PREGNANCY TEST', Price: '$60' },
+     
+    ];
     const rows = elements.map((element) => (
       <tr key={element.name}>
         <td>{element.position}</td>
@@ -34,6 +45,17 @@ function AdvancedCare() {
     ));
 
     const puppyPackageRows = puppyPackagePricing.map((element) => (
+      <tr key={element.position}>
+        <td>{element.position}</td>
+        <td>{element.Treatment}</td>
+        <td>{element.Price}</td>
+        
+      </tr>
+
+
+    ));
+
+    const catPackageRows = catPackagePricing.map((element) => (
       <tr key={element.position}>
         <td>{element.position}</td>
         <td>{element.Treatment}</td>
