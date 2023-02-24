@@ -16,19 +16,13 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-      <AspectRatio ratio={900 / 1080} sx={{ maxWidth: 1200 }} mx="auto">
+      {/* <AspectRatio ratio={900 / 1080} sx={{ maxWidth: 1200 }} mx="auto">
         Main App from App.ysx
         {/* <div style={{ width: 940, marginLeft: 'auto', marginRight: 'center'}}> */}
-        <Image
-        width={900}
-        height={1600}
-        fit="contain"
-        src="../images/dogg1.png"
-        alt="Panda"
-      />
+       
       
-      {/* </div> */}
-      </AspectRatio>
+      {/* </div> }
+      </AspectRatio> */}
       <Box
       mx="auto"
         sx={(theme) => ({
@@ -45,19 +39,23 @@ export default function Home() {
           },
         })}
       >
+         <Image
+        width={900}
+        height={500}
+        fit="contain"
+        src="../images/dogg1.png"
+        alt="Panda"
+      />
 <Title order={1}> Welcome to Amigos pet clinic</Title>
         <p>
-        We are providing great service at low cost in greater Pasadena, Houston for few years.
+        We are providing great service at low cost in greater Pasadena, Houston since 2014.
 
         </p>
         <br>
-        
         </br>
-        <p>
-       
-        </p>
+        
         <Blockquote cite="– Owner" icon={<IconFlame size={24} />}>
-        Quality affordable care to all pets Both walk-ins /appointments. 
+        "Quality affordable care to all pets Both walk-ins /appointments."
         </Blockquote>
        <Container>
        <p>
