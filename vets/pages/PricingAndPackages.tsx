@@ -14,7 +14,7 @@ function AccordionControl(props: AccordionControlProps) {
     </Box>
   );
 }
-function AdvancedCare() {
+function PricingAndPackages() {
     const [value, setValue] = useState(['react']);
     // const { classes } = useStyles();
     useEffect(()=> {
@@ -203,5 +203,5 @@ function AdvancedCare() {
   );
 }
 
-export default AdvancedCare;
+export default PricingAndPackages;
 

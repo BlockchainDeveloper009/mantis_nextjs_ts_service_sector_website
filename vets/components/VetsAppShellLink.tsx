@@ -87,7 +87,7 @@ function AppShellLinkExample() {
                 <div style={{display: "flex", flexDirection: "column", padding:15 }}>
                
           
-                    <Link href="/AdvancedCare" style={{padding:5 }}>
+                    <Link href="/PricingAndPackages" style={{padding:5 }}>
                      Pricing & Packages
                     </Link>
                     <Link href="/ApplicationContainer" style={{padding:5 }}>
