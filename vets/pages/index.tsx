@@ -55,7 +55,7 @@ export default function Home() {
         </br>
         
         <Blockquote cite="– Owner" icon={<IconFlame size={24} />}>
-        "Quality affordable care to all pets Both walk-ins /appointments."
+        Quality affordable care to all pets Both walk-ins/appointments.
         </Blockquote>
        <Container>
        <p>

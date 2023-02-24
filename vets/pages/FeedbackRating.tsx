@@ -18,7 +18,7 @@ function FeedbackRating() {
     <br></br>
 <Stack>
 <div>Overall Rating</div>
-<Rating value={valuedata} onChange={setValue}>'Rate us'</Rating>
+<Rating value={valuedata} onChange={setValue}>Rate us</Rating>
 
       <Group>
         <div>Clinic Friendly</div>
