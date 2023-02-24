@@ -16,18 +16,18 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-      <AspectRatio ratio={900 / 1600} sx={{ maxWidth: 300 }} mx="auto">
+      <AspectRatio ratio={900 / 1080} sx={{ maxWidth: 1200 }} mx="auto">
         Main App from App.ysx
-        <div style={{ width: 240, marginLeft: 'auto', marginRight: 'auto' }}>
+        {/* <div style={{ width: 940, marginLeft: 'auto', marginRight: 'center'}}> */}
         <Image
         width={900}
         height={1600}
         fit="contain"
-        src="https://images.unsplash.com/photo-1527118732049-c88155f2107c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=720&q=80"
+        src="../images/dogg1.png"
         alt="Panda"
       />
       
-      </div>
+      {/* </div> */}
       </AspectRatio>
       <Box
       mx="auto"
@@ -59,7 +59,8 @@ export default function Home() {
         <Blockquote cite="– Owner" icon={<IconFlame size={24} />}>
         Quality affordable care to all pets Both walk-ins /appointments. 
         </Blockquote>
-        <p>
+       <Container>
+       <p>
         All surgeries must be scheduled by appointments. We require prior examination of the pet before scheduling surgery.
         </p>
         <br></br>
@@ -68,6 +69,9 @@ export default function Home() {
          All cats must be in an appropriate carrier. 
         Please keep an eye on your pets at all times.
         </p>
+
+       </Container>
+       <br></br>
 </Box>
       {/* <Spoiler maxHeight={120} showLabel="Show more" hideLabel="Hide">
       {/* Content here */} 

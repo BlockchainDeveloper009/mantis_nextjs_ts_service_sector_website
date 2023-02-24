@@ -30,7 +30,7 @@ import {
 // } from "react-router-dom";
 import Link from "next/link";
 import ChipsExample from './ChipsExample';
-import ApplicationContainer from '../pages/Rating';
+import ApplicationContainer from '../pages/FeedbackRating';
 import { useRouter } from 'next/navigation';
 import GeneralFooter from './GeneralFooter';
 import { DoubleHeaderColored } from './HeaderRibbon';
@@ -139,7 +139,7 @@ function AppShellLinkExample() {
           
            </Link>
 
-           <Link href="/Rating">
+           <Link href="/FeedbackRating">
               <Text  c="cyan">Rate us / Feedback</Text>
           
            </Link>
