@@ -32,7 +32,7 @@ function Faq() {
 
 
   <Title order={4}>Q: Can i request for a doctor who speaks spanish?</Title>
-      A: Yes, you can request. However, its subject to Dr's availability(who can speak spanish)
+      A: Yes, you can request. However, its subject to Doctors availability(who can speak spanish)
 
   <br></br>
   <br></br>
