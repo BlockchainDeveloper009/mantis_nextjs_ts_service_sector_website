@@ -1,7 +1,19 @@
-import { Box, Chip, createStyles, Table, Title } from '@mantine/core';
+import { Accordion, AccordionControlProps, ActionIcon, Box, Chip, createStyles, Table, Title } from '@mantine/core';
+import { IconDots } from '@tabler/icons';
 import { useEffect, useState } from "react";
 import Cards from '../components/Cards';
 import ChipsExample from '../components/ChipsExample';
+
+function AccordionControl(props: AccordionControlProps) {
+  return (
+    <Box sx={{ display: 'flex', alignItems: 'center' }}>
+      <Accordion.Control {...props} />
+      <ActionIcon size="lg">
+        <IconDots size={16} />
+      </ActionIcon>
+    </Box>
+  );
+}
 function AdvancedCare() {
     const [value, setValue] = useState(['react']);
     // const { classes } = useStyles();
@@ -65,6 +77,108 @@ function AdvancedCare() {
 
       
     ));
+
+  function getPuppyPackage(){
+    return (
+
+      <Accordion
+      styles={{
+        item: {
+          // styles added to all items
+          backgroundColor: '#fff',
+          border: '1px solid #ededed',
+
+          // styles added to expanded item
+          '&[data-active]': {
+            backgroundColor: '#ccc',
+          },
+        },
+
+        chevron: {
+          // styles added to chevron when it should rotate
+          '&[data-rotate]': {
+            transform: 'rotate(-90deg)',
+          },
+        },
+      }}
+    >
+       <Accordion.Item value="item-1">
+        <AccordionControl><Title order={2}>Puppy Package Prices</Title></AccordionControl>
+        <Accordion.Panel>
+        <Table striped highlightOnHover withBorder withColumnBorders>
+        <thead>
+          <tr>
+            <th>Package Name</th>
+            <th>Treatment</th>
+            <th>Price</th>
+            
+            
+          </tr>
+        </thead>
+        <tbody>{puppyPackageRows}</tbody>
+      </Table>
+        
+
+        </Accordion.Panel>
+      </Accordion.Item>
+      
+     
+    </Accordion>
+
+    )
+  }
+
+  
+  function getCatPackage(){
+    return (
+
+      <Accordion
+      styles={{
+        item: {
+          // styles added to all items
+          backgroundColor: '#fff',
+          border: '1px solid #ededed',
+
+          // styles added to expanded item
+          '&[data-active]': {
+            backgroundColor: '#ccc',
+          },
+        },
+
+        chevron: {
+          // styles added to chevron when it should rotate
+          '&[data-rotate]': {
+            transform: 'rotate(-90deg)',
+          },
+        },
+      }}
+    >
+       <Accordion.Item value="item-1">
+        <AccordionControl><Title order={2}>Cat Package Prices</Title></AccordionControl>
+        <Accordion.Panel>
+        <Table striped highlightOnHover withBorder withColumnBorders>
+        <thead>
+          <tr>
+            <th>Package Name</th>
+            <th>Treatment</th>
+            <th>Price</th>
+            
+            
+          </tr>
+        </thead>
+        <tbody>{catPackageRows}</tbody>
+      </Table>
+        
+
+        </Accordion.Panel>
+      </Accordion.Item>
+      
+     
+    </Accordion>
+
+    )
+  }
+
   return (
     <div className="App">
         <Box sx={{ maxWidth: 1000,paddingTop:200}} mx="auto">
@@ -80,33 +194,10 @@ function AdvancedCare() {
       <tbody>{rows}</tbody>
     </Table>
 
-    <Title order={2}>Puppy Package Prices</Title>
-    <Table striped highlightOnHover withBorder withColumnBorders>
-      <thead>
-        <tr>
-          <th>Package Name</th>
-          <th>Treatment</th>
-          <th>Price</th>
-          
-          
-        </tr>
-      </thead>
-      <tbody>{packageRows}</tbody>
-    </Table>
+    
+   {getPuppyPackage()}
 
-    <Title order={2}>Cat Package Prices</Title>
-    <Table striped highlightOnHover withBorder withColumnBorders>
-      <thead>
-        <tr>
-          <th>Package Name</th>
-          <th>Treatment</th>
-          <th>Price</th>
-          
-          
-        </tr>
-      </thead>
-      <tbody>{packageRows}</tbody>
-    </Table>
+   {getCatPackage()}
         </Box>
     </div>
   );

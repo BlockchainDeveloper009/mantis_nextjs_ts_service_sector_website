@@ -84,3 +84,15 @@ Footer
 add google review link to application side bar
 
 git push --set-upstream origin test_vets_darkTheme
+
+Welcome
+Your app will appear here once you complete your first deployment.
+Deployment didn't work? Here are some options:
+
+Check out our docs
+Click the Feedback button in the bottom-left corner of the service page
+Quick tips:
+
+Have you checked your build settings? The baseDirectory parameter in the artifacts step of your YAML file should match your build output directory
+Building your app should produce an index.html file. Try building your app locally and check a file with that name exists in the artifacts base directory.
+
