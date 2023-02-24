@@ -1,4 +1,4 @@
-import { Box, Chip, createStyles, Spoiler, Textarea, Title } from '@mantine/core';
+import { Box, Chip, Container, createStyles, Spoiler, Textarea, Title } from '@mantine/core';
 import { useEffect, useState } from "react";
 import Cards from '../components/Cards';
 import ChipsExample from '../components/ChipsExample';
@@ -11,11 +11,15 @@ function AboutUs() {
 
 
   return (
-    <div className="App">
+    <div className="para">
        
-       <Box sx={{  color:'purple', fontSize: 18, lineHeight: 1.4, paddingTop: 100, paddingDown:200, paddingLeft:200, paddingRight:200,}}>
+       <Box sx={{  color:'orange', fontSize: 18, lineHeight: 1.4, paddingTop: 100, paddingDown:200, paddingLeft:200, paddingRight:200,}}>
        <Title order={2}>About Us</Title>
-      <Spoiler maxHeight={120} showLabel="Show more" hideLabel="Hide">
+
+
+
+       <Container size={1000} px={20}>
+       <Spoiler maxHeight={120} showLabel="Show more" hideLabel="Hide">
       {/* Content here */}
 
      
@@ -69,6 +73,9 @@ function AboutUs() {
         Amigos pet clinic focusedon quality evidence-basedmodernveterinary care, client education, and friendly, personal service. The hospital received accreditation by the American Animal Hospital Association in 1994 and was awarded the highest of three levels of accreditation.
         </p>
     </Spoiler>
+        
+      </Container>
+     
 
   
     </Box>

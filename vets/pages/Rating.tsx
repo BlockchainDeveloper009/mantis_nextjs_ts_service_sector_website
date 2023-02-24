@@ -1,16 +1,17 @@
 import { Chip, createStyles } from '@mantine/core';
 import { useEffect, useState } from "react";
-function ApplicationContainer() {
-    const [value, setValue] = useState(['react']);
+function Rating() {
+    // const [value, setValue] = useState(['react']);
+    const [value, setValue] = useState(0);
     // const { classes } = useStyles();
     useEffect(()=> {
         console.log(value)
     })
-
+    
 
   return (
     <div className="App">
-      <a>testing app container.........</a>
+     <Rating value={value} onChange={setValue} />;
     <Chip.Group position="center" multiple defaultValue={['react']}>
       ggggggggggggggg
       {/* <Chip classNames={classes} value="react">React</Chip>
@@ -23,5 +24,5 @@ function ApplicationContainer() {
   );
 }
 
-export default ApplicationContainer;
+export default Rating;
 

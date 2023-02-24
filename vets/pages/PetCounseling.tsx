@@ -13,7 +13,7 @@ function PetCounseling() {
 
   return (
     <div className="App">
-      <Box sx={{  color:'purple', fontSize: 18, lineHeight: 1.4, 
+      <Box sx={{  color:'orange', fontSize: 18, lineHeight: 1.4, 
     paddingTop: 100, paddingDown:200, paddingLeft:200, paddingRight:200,}}>
       
       <Title order={1}> {thisPageHeader}</Title>

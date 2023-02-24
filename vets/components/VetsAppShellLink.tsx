@@ -30,7 +30,7 @@ import {
 // } from "react-router-dom";
 import Link from "next/link";
 import ChipsExample from './ChipsExample';
-import ApplicationContainer from '../pages/ApplicationContainer';
+import ApplicationContainer from '../pages/Rating';
 import { useRouter } from 'next/navigation';
 import GeneralFooter from './GeneralFooter';
 import { DoubleHeaderColored } from './HeaderRibbon';
@@ -133,11 +133,18 @@ function AppShellLinkExample() {
            <Text  c="cyan"> Clinic Policy</Text>
           
            </Link>
+
+           <Link href="/Rating">
+              <Text  c="cyan">Rate us / Feedback</Text>
+          
+           </Link>
            
            <Title order={4}>Clinic Hours</Title>
-           <Text  c="blue"> Mon-Fri : 8am - 5pm </Text>
+           <Text  c="teal.4"> Mon-Fri : 8am - 5pm </Text>
            <Text  c="teal.4">Sat : 8am - 3pm</Text>
            <Text  c="teal.4">Sun: Holiday</Text>
+
+           
          </Stack>
            
           </Aside>
@@ -166,7 +173,7 @@ function AppShellLinkExample() {
 
            
           
-            <SimpleGrid cols={7} sx={{ color: 'blue', fontSize: 18, lineHeight: 1.4, padding:5 }}
+            <SimpleGrid cols={7} sx={{ color: theme.colors.orange, fontSize: 18, lineHeight: 1.4, padding:5 }}
             
             spacing="lg"
             breakpoints={[

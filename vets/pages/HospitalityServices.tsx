@@ -14,7 +14,7 @@ function HospitalityServices() {
 
   return (
     <div className="App">
-      <Box sx={{  color:'purple', fontSize: 18, lineHeight: 1.4, paddingTop: 100, paddingDown:300, paddingLeft:200, paddingRight:200,}}>
+      <Box sx={{  color:'orange', fontSize: 18, lineHeight: 1.4, paddingTop: 100, paddingDown:300, paddingLeft:200, paddingRight:200,}}>
 {/* // <Box sx={{ maxWidth: 1000,paddingTop:200}} mx="auto"> */}
 <Title order={1} > {thisPageHeader}</Title>
 <Box sx={{ maxWidth: 1000,paddingTop:200}} mx="auto">

@@ -21,7 +21,7 @@ import {
     Routes 
 } from "react-router-dom";
 import ChipsExample from './ChipsExample';
-import ApplicationContainer from '../pages/ApplicationContainer';
+import ApplicationContainer from '../pages/Rating';
 
 // import Cards from './Cards';
 

@@ -1,4 +1,4 @@
-import { Accordion, AccordionControlProps, ActionIcon, Box, Chip, createStyles, Table, Title } from '@mantine/core';
+import { Accordion, AccordionControlProps, ActionIcon, Box, Chip, ColorSchemeProvider, createStyles, Table, Title } from '@mantine/core';
 import { IconDots } from '@tabler/icons';
 import { useEffect, useState } from "react";
 import Cards from '../components/Cards';
@@ -85,15 +85,16 @@ function PricingAndPackages() {
       styles={{
         item: {
           // styles added to all items
-          backgroundColor: '#fff',
+          backgroundColor:'#FD7E14' ,//'#FD7E14', //,
           border: '1px solid #ededed',
 
           // styles added to expanded item
           '&[data-active]': {
-            backgroundColor: '#ccc',
+            backgroundColor: '#5C5F66',//#ccc',
           },
+          color: '#ccc',
         },
-
+       
         chevron: {
           // styles added to chevron when it should rotate
           '&[data-rotate]': {
@@ -128,7 +129,56 @@ function PricingAndPackages() {
     )
   }
 
-  
+  function getDefaultPackage(){
+    return (
+
+      <Accordion
+      styles={{
+        item: {
+          // styles added to all items
+          backgroundColor:'#D9480F' ,//'#FD7E14', //,
+          border: '1px solid #ededed',
+
+          // styles added to expanded item
+          '&[data-active]': {
+            backgroundColor: '#5C5F66',//#ccc',
+          },
+          color: '#ccc',
+        },
+
+        chevron: {
+          // styles added to chevron when it should rotate
+          '&[data-rotate]': {
+            transform: 'rotate(-90deg)',
+          },
+        },
+      }}
+    >
+       <Accordion.Item value="item-1">
+        <AccordionControl><Title order={2}>Cat Package Prices</Title></AccordionControl>
+        <Accordion.Panel>
+        <Table striped highlightOnHover withBorder withColumnBorders>
+        <thead>
+          <tr>
+            <th>Package Name</th>
+            <th>Treatment</th>
+            <th>Price</th>
+            
+            
+          </tr>
+        </thead>
+        <tbody>{rows}</tbody>
+      </Table>
+        
+
+        </Accordion.Panel>
+      </Accordion.Item>
+      
+     
+    </Accordion>
+
+    )
+  }
   function getCatPackage(){
     return (
 
@@ -136,13 +186,14 @@ function PricingAndPackages() {
       styles={{
         item: {
           // styles added to all items
-          backgroundColor: '#fff',
+          backgroundColor:'#D9480F' ,//'#FD7E14', //,
           border: '1px solid #ededed',
 
           // styles added to expanded item
           '&[data-active]': {
-            backgroundColor: '#ccc',
+            backgroundColor: '#5C5F66',//#ccc',
           },
+          color: '#ccc',
         },
 
         chevron: {
@@ -182,7 +233,42 @@ function PricingAndPackages() {
   return (
     <div className="App">
         <Box sx={{ maxWidth: 1000,paddingTop:200}} mx="auto">
-          <Title order={2}>Visiting Category</Title>
+          {/* //backgroundColor:'#D9480F' */}
+         
+
+          <Accordion
+      styles={{
+        item: {
+          // styles added to all items
+          backgroundColor:'#E8590C' ,//'#FD7E14', //,
+          border: '1px solid #ededed',
+
+          // styles added to expanded item
+          '&[data-active]': {
+            backgroundColor: '#5C5F66',//#ccc',
+          },
+          color: '#ccc',
+        },
+
+        chevron: {
+          // styles added to chevron when it should rotate
+          '&[data-rotate]': {
+            transform: 'rotate(-90deg)',
+          },
+        },
+      }}
+    >
+       <Accordion.Item value="item-1">
+        <AccordionControl><Title order={2}> Primary Care Prices</Title></AccordionControl>
+        <Accordion.Panel>
+   
+        
+
+        </Accordion.Panel>
+      </Accordion.Item>
+      
+     
+    </Accordion>
         <Table striped highlightOnHover withBorder withColumnBorders>
       <thead>
         <tr>

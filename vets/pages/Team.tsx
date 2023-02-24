@@ -1,4 +1,4 @@
-import { Box, Card, Chip, createStyles, Spoiler,Image } from '@mantine/core';
+import { Box, Card, Chip, createStyles, Spoiler,Image, Container } from '@mantine/core';
 import { useEffect, useState } from "react";
 import Cards from '../components/Cards';
 import ChipsExample from '../components/ChipsExample';
@@ -12,7 +12,8 @@ function ContactUs() {
 
   return (
     <div className="App">
-      <Box sx={{  color:'purple', fontSize: 18, lineHeight: 1.4, paddingTop: 100, paddingDown:200, paddingLeft:200, paddingRight:200,}}>
+
+      <Box sx={{ color: 'orange', fontSize: 18, lineHeight: 1.4, paddingTop: 100, paddingDown:200, paddingLeft:200, paddingRight:200,}}>
 
 
       <Card shadow="sm" p="lg" radius="md" withBorder>
@@ -25,8 +26,10 @@ function ContactUs() {
                         />
                     </Card.Section>
         </Card>
+        <Container size={900} px={20} sx={{paddingTop: 25}}>
 
-      <Spoiler maxHeight={120} showLabel="Show more" hideLabel="Hide">
+
+        <Spoiler maxHeight={120} showLabel="Show more" hideLabel="Hide">
       {/* Content here */}
 
       <article>
@@ -58,7 +61,10 @@ function ContactUs() {
 
         Northpark Animal Hospital focusedon quality evidence-basedmodernveterinary care, client education, and friendly, personal service. The hospital received accreditation by the American Animal Hospital Association in 1994 and was awarded the highest of three levels of accreditation.
         
-    </Spoiler>
+      </Spoiler>
+
+        </Container>
+  
 
    
     </Box>
