@@ -67,20 +67,25 @@ function AppShellLinkExample() {
             <div style={{display: "flex", flexDirection: "column", padding:15 }}>
            
                    <Link href="/PrimaryCare"  style={{padding:5 }} >
-                      Primary Care
+                   <Text  c="cyan">Primary Care</Text>
+                      
                     </Link>
                    
                     <Link href="/Diagnostics"  style={{padding:5 }} >
-                    Diagnostics
+                    <Text  c="cyan">Diagnostics</Text>
+                    
                     </Link>
                     <Link href="/SurgeryServices"  style={{padding:5 }} >
-                    Surgery Services
+                    <Text  c="cyan">Surgery Services</Text>
+                    
                     </Link>
                     <Link href="/TravelCertificates"  style={{padding:5 }} >
-                    Travel Certificates
+                    <Text  c="cyan">Travel Certificates</Text>
+                    
                     </Link>
                     <Link href="/HospitalityServices"  style={{padding:5 }} >
-                    Hospitality Services
+                    <Text  c="cyan">Hospitality Services</Text>
+                    
                     </Link>
                 </div>    
                     
