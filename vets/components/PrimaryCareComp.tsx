@@ -31,6 +31,7 @@ function PrimaryCareComp() {
     const viewport = useRef<HTMLDivElement>(null);
     // const scrollToTop = () => viewport.current.scrollTo({ top: 0, behavior: 'smooth' });
     let np="";
+    //
 const features = grid.map((m) => {
     <Grid.Col span={4} styles={{maxWdith: 350}} sm={4} xs={4}>
     <Card shadow="sm" p="lg" radius="md" withBorder>
@@ -64,7 +65,7 @@ const features = grid.map((m) => {
   return (
     <div className="App">
         
-        <Grid justify="Center">
+        <Grid justify="Center" sx={{paddingDown:300}}>
         {/* <ScrollArea style={{ width: 1000, height: 5000 }} viewportRef={viewport}> </ScrollArea>*/}
         {/* ... content */}
       
@@ -73,20 +74,20 @@ const features = grid.map((m) => {
 
            
 
-            <Grid.Col span={4} styles={{maxWdith: 150}} sm={4} xs={4}>
+            <Grid.Col span={4} styles={{maxWdith: 350}} sm={4} xs={4}>
                     <Card shadow="sm" p="lg" radius="md" withBorder>
                             <Card.Section>
                                 <Image
                                 src={GridPreventiveCareImages[1]}
-                                height={300}
+                                height={200}
                                 alt="Norway"
                                 />
                             </Card.Section>
 
                             <Group position="apart" mt="md" mb="xs">
-                                <Text weight={500}>{GridHeaders[1]}</Text>
+                                <Text weight={200} size={20}>{GridHeaders[1]}</Text>
                                 <Badge color="pink" variant="light">
-                                On Sale
+                                <Text weight={200} size={20}> $25.00</Text>
                                 </Badge>
                             </Group>
 

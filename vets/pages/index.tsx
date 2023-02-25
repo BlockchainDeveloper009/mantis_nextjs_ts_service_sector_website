@@ -43,7 +43,7 @@ export default function Home() {
         width={900}
         height={500}
         fit="contain"
-        src="../images/dogg1.png"
+        src="/images/dogg1.png"
         alt="Panda"
       />
 <Title order={1}> Welcome to Amigos pet clinic</Title>

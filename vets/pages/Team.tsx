@@ -19,7 +19,7 @@ function ContactUs() {
       <Card shadow="sm" p="lg" radius="md" withBorder>
                     <Card.Section>
                         <Image
-                        src="./images/Team.png"
+                        src="/images/Team.png"
                         height={600}
                         fit="contain"
                         alt="Norway"

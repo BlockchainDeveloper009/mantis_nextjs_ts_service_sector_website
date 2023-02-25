@@ -16,7 +16,7 @@ const GridDesc= [
 const AdsSellerImages= [ 
     "/images/Home3.PNG", 
     "/images/gogleReviews.PNG", 
-    "/images/Home2.PNG",,
+    "/images/Home2.PNG","/images/p2.PNG",
     ]
 const imgHeight = 650
 function AdSellerCarousel() {
@@ -50,7 +50,7 @@ function AdSellerCarousel() {
     <Card shadow="sm" p="lg" radius="md" withBorder>
                     <Card.Section>
                         <Image
-                        src= {AdsSellerImages[1]}
+                        src= {AdsSellerImages[3]}
                         height={imgHeight}
                         fit="contain"
                         alt="Norway"
